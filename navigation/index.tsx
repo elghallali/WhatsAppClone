@@ -19,7 +19,7 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
@@ -35,7 +35,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  */
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-function RootNavigator() {
+const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
@@ -53,7 +53,7 @@ function RootNavigator() {
  */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
-function BottomTabNavigator() {
+const BottomTabNavigator = () => {
   const colorScheme = useColorScheme();
 
   return (
@@ -99,9 +99,12 @@ function BottomTabNavigator() {
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
-function TabBarIcon(props: {
+const TabBarIcon = (props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}) {
+}) => {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
+
+
+export default Navigation;
