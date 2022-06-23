@@ -96,7 +96,7 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
        }}>
        <MainTab.Screen
          name="Camera"
-         component={TabOneScreen}
+         component={TabTwoScreen}
          options={{
            tabBarIcon: ({color}) => <Fontisto name='camera' color={color} size={18}/>,
            tabBarLabel: () => null,
@@ -109,12 +109,12 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
        />
        <MainTab.Screen
          name="Status"
-         component={TabOneScreen}
+         component={TabTwoScreen}
 
        />
        <MainTab.Screen
          name="Calls"
-         component={TabOneScreen}
+         component={TabTwoScreen}
 
        />
      </MainTab.Navigator>
