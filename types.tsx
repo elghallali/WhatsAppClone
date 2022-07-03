@@ -41,12 +41,13 @@
    id: String;
    content: String;
    createdAt: String;
+   user: User;
  };
 
  export type ChatRoom = {
    id:String;
-   users: [User];
-   lastMessage: [Message];
+   users: User[];
+   lastMessage: Message[];
  }
 
  export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
