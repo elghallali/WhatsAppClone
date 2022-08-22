@@ -17,6 +17,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import ChatsScreen from '../screens/ChatsScreen';
+import ContactsScreen from '../screens/ContactsScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -99,6 +100,7 @@ const RootNavigator = () => {
           </View>
         ),
       })} />
+      <Stack.Screen name="Contacts" component={ContactsScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
